@@ -12,7 +12,8 @@
 		$header = $('#header'),
 		$nav = $('#nav'),
 		$main = $('#main'),
-		$navPanelToggle, $navPanel, $navPanelInner;
+		$navPanelToggle, $navPanel, $navPanelInner,
+		$topButton;
 
 	// Breakpoints.
 		breakpoints({
@@ -122,7 +123,12 @@
 
 	// Background.
 		$wrapper._parallax(0.925);
-
+	
+	// Top Button.
+		$topButton = $(
+			'<a href="#header" id="topButton"></a>'
+		).appendTo($wrapper);
+			
 	// Nav Panel.
 
 		// Toggle.
@@ -136,9 +142,11 @@
 					bottom: '5vh',
 					enter: function() {
 						$navPanelToggle.removeClass('alt');
+						$topButton.removeClass('show');
 					},
 					leave: function() {
 						$navPanelToggle.addClass('alt');
+						$topButton.addClass('show');
 					}
 				});
 
