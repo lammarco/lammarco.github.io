@@ -9,6 +9,8 @@
 		<title>Marco's Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="twitter:widgets:theme" content="dark">
+		<meta name="twitter:widgets:border-color" content="#55acee">
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 	</head>
@@ -47,16 +49,43 @@
 							<!-- Featured Post -->
 								<article class="post">
 									<header class="major">
-										<span class="date">April 25, 2017</span>
-										<h2><a href="#">And this is a<br />
-										massive headline</a></h2>
-										<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-										facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-										amet nullam sed etiam veroeros.</p>
+										<h2><a href="./about.html">About Me</a></h2>
+										<p>My name is Marco Lam, currently studying both<br />
+										Computer Science (Specialization: Intelligent Systems) and Computer Game Science at UC Irvine.<br />
+										I am passionate in all things game-related, but especially in technical and design-related aspects.</p>
 									</header>
-									<a href="#" class="image main"><img src="../images/pic01.jpg" alt="" /></a>
 									<ul class="actions special">
-										<li><a href="#" class="button large">Full Story</a></li>
+										<li><a href="./about.html" class="button large">More About Me</a></li>
+									</ul>
+								</article>
+								
+								<article class="post">
+									<header class="major">
+										<h2><a href="https://macrotree.itch.io/delta-physics-prototype" target="_blank">DeltaPhysics (Prototype)</a></h2>
+										<h4>Role: Solo Developer</h4>
+									</header>
+									<video class="video main small" autoplay muted loop playsinline controls>
+										<source src="../videos/physics_catapult.mp4">
+										This browswer does not support HTML5 video.
+										<a href="../videos/physics_catapult.mp4" target="_blank">Click to view MP4</a>
+									</video>
+									<p>A physics-based Metroidvania project in <b>C# Unity2D</b> to deepen my understanding via implementing higher-level features:</p>
+										<ul class="nobullet">
+											<li class="nobullet">Editor Tools:</li> 	
+												<span class="indent left">Created custom inspector editors ranging from simple button organization to
+													helpers that facilitate map design (e.g. building 2D Sprite Shape curves).</span>
+											<li class="nobullet">Map Design:</li> 	
+												<span class="indent left">Determining progression in an interconnected, nonlinear world of physics-related phenomena 
+													&mdash; while preserving flow as a sequence platforming challenges.</span>
+											<li class="nobullet">Mechanical Depth:</li> 	
+												<span class="indent left">Implemented ability upgrades that all interact with the each other,
+													while each having various effects on the player and environments.</span>
+											<li class="nobullet">Mechanical Polish:</li> 	
+												<span class="indent left">Worked with (and against) the physics system to improve player experience, such as
+													state-dependent acceleration, adjusted jump curves, input grace times, etc.</span>
+										</ul>
+									<ul class="actions special">
+										<li><a href="https://macrotree.itch.io/delta-physics-prototype" target="_blank" class="button large">Play the Game</a></li>
 									</ul>
 								</article>
 
@@ -64,22 +93,36 @@
 								<section class="posts">
 									<article>
 										<header>
-											<h2><a href="#">Sed magna<br />
-											ipsum faucibus</a></h2>
+											<h2>
+												<a href="https://twitter.com/camoREXXX/status/1486257401150033921?ref_src=twsrc%5Etfw" 	target="_blank" rel="noopener noreferrer">
+													Rhythm Game (Discord) Bot
+												</a>
+											</h2>
+											<h4>Role: Programmer</h4>
 										</header>
 										<content>
-											<a href="#" class="image fit"><img src="../images/pic02.jpg" alt="" /></a>
-											<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-										</content>
-									</article>
-									<article>
-										<header>
-											<h2><a href="#">Primis eget<br />
-											imperdiet lorem</a></h2>
-										</header>
-										<content>
-											<a href="#" class="image fit"><img src="../images/pic03.jpg" alt="" /></a>
-											<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+											<blockquote class="twitter-tweet">
+												<p lang="en" dir="ltr">I&#39;m finally announcing the beta release of the RG Bot<br>
+												a discord bot that&#39;s a rhythm game database<br>
+												you can find songs, artists, illustrators, charters, etc<br>
+												with many contributors &amp; all coding done by 
+												<a href="https://twitter.com/MacroTree?ref_src=twsrc%5Etfw">@MacroTree</a>
+												this community project has been in the works for over a year<br>exs: 
+												<a href="https://t.co/sVoHnB8dXT">pic.twitter.com/sVoHnB8dXT</a></p>
+												&mdash; camo (@camoREXXX) 
+												<a href="https://twitter.com/camoREXXX/status/1486257401150033921?ref_src=twsrc%5Etfw" 	target="_blank" rel="noopener noreferrer">January 26, 2022</a>
+											</blockquote>
+											
+											<text>
+												<p>Written in <b>Python using discord-rewrite.</b>
+													Provides access to rhythm game information via chat commands.</p>
+												<ul>	
+													<li class="left">Collaborated with community members to compile song chart data into a formatted spreadsheet.</li> 
+													<li class="left">Generated database with multi-layer attributes (e.g. subdifficulties) from said spreadsheet.</li> 	
+													<li class="left">RegEx input processing &mdash; including multi-word, non-alphanumeric information (e.g. song titles).</li> 
+													<li class="left">Organized data into Discord embeds, sent asynchronously.</li>
+												</ul>		
+											</text>
 										</content>
 									</article>
 									<article>
@@ -94,7 +137,6 @@
 									</article>
 									<article>
 										<header>
-											<span class="date">April 14, 2017</span>
 											<h2><a href="#">Tempus sed<br />
 											nulla imperdiet</a></h2>
 										</header>
@@ -160,6 +202,6 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
-
+			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</body>
 </html>
