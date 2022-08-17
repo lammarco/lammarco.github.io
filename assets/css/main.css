@@ -191,7 +191,7 @@ input, select, textarea {
 
 	p {
 		text-align: justify;
-		margin: 0 0 2rem 0;
+		margin: 0 0 1rem 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -287,6 +287,10 @@ input, select, textarea {
 		hr.major {
 			margin: 5rem 0;
 		}
+
+	.no-float{
+		float:none !important;
+	}
 
 	.align-left {
 		text-align: left;
@@ -2612,7 +2616,7 @@ input, select, textarea {
 		}
 
 		.image.left, .image.right, .video.left, .video.right {
-			max-width: 40%;
+			max-width: 45%;
 		}
 
 			.image.left img, .image.right img, .video.left video, .video.right video {
@@ -2621,19 +2625,19 @@ input, select, textarea {
 
 		.image.left, .video.left {
 			float: left;
-			margin: 0 2rem 2rem 0;
+			margin: 0 1rem 2rem 0;
 			top: 0.75rem;
 		}
 
 		.image.right, .video.right {
 			float: right;
-			margin: 0 0 2rem 2rem;
+			margin: 0 0 1rem 2rem;
 			top: 0.75rem;
 		}
 
 		.image.fit, .video.fit {
 			display: block;
-			margin: 2rem 0;
+			margin: 2rem 0 0.5rem 0;
 			width: 100%;
 		}
 
@@ -2907,10 +2911,6 @@ input, select, textarea {
 		list-style: none;
 		padding-left: 1rem;
 	}
-	
-	.left{
-		text-align: left;
-	}
 
 	ol {
 		list-style: decimal;
@@ -2985,6 +2985,7 @@ input, select, textarea {
 
 	header {
 		cursor: default;
+		padding-bottom: 1rem;
 	}
 
 		header > .date {
@@ -2994,11 +2995,11 @@ input, select, textarea {
 			margin: 0 0 1rem 0;
 			position: relative;
 		}
-
+/*
 		header > p {
 			font-style: italic;
 		}
-
+*/
 		header > h1 + p {
 			font-size: 1.1rem;
 			margin-top: -0.5rem;
@@ -3285,7 +3286,7 @@ input, select, textarea {
 			height: 100%;
 			background-color: rgba(var(--overlaybg), 0.5);
 			background-blend-mode: multiply;
-			background-image: url("../../images/bg_tile.png");
+			background-image: url("../../res/bg_tile.png");
 			background-size: auto;
 			background-position:top center;
 			background-repeat: repeat;
