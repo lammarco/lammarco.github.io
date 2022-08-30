@@ -191,7 +191,7 @@ input, select, textarea {
 
 	p {
 		text-align: justify;
-		margin: 0 0 1rem 0;
+		margin: 0.5rem 0 1rem 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -2671,7 +2671,12 @@ input, select, textarea {
 			}
 
 		@media screen and (max-width: 736px) {
-
+			.image.left, .video.left, .image.right, .video.right {
+				margin: 0 0.5rem 1rem 0.5rem;
+				max-width: 100%;
+				float: none;
+			}
+/*
 			.image.fit, .video.fit {
 				margin: 1rem 0;
 			}
@@ -2679,7 +2684,7 @@ input, select, textarea {
 			.image.main, .video.main {
 				margin: 1rem 0;
 			}
-
+*/
 		}
 
 	a.image {
@@ -2701,9 +2706,9 @@ input, select, textarea {
 		}
 
 /* Twitter Embeds */
-	.twitter-tweet{
-		width: 45% !important;
-		padding-top:1%;]
+	.twitter-embed{
+		width: 45%;
+		padding-top:1%;
 		margin-left: 2%;
 		margin-right: 2%;
 	}
@@ -3956,8 +3961,23 @@ input, select, textarea {
 					border-top-width: 0;
 				}
 
-			/* /*causes posts to line up side-by-side, messing up layout**
+			/*causes posts to line up side-by-side, messing up layout*/
 			@media screen and (max-width: 980px) {
+				#main > .posts > article:nth-child(2n+1) > content {
+					-moz-flex-direction: column;
+					-webkit-flex-direction: column;
+					-ms-flex-direction: column;
+					flex-direction: column;
+				}
+				
+				#main > .posts > article > content > text {
+					width: 100%;
+				}
+				
+				.twitter-embed{
+					width: 100%;
+				}
+				/*
 				#main > .posts > * {
 					width: 50%;
 				}
@@ -3983,9 +4003,9 @@ input, select, textarea {
 					order: 2;
 					margin: 2%;
 				}
-
+				*/
 			}
-			*/
+			
 
 			@media screen and (max-width: 736px) {
 
