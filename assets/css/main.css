@@ -4,11 +4,11 @@
 :root {
 	--theme: #dddddd;/*#212931;*/
 	--text:#dddddd;
-	--darktext: #1e252d;
+	--darktext: #323232;
 	--icon: #eeeeee;
 	--link: #18bfef;
 	--overlaybg: 0,0,0;
-	--highlight: 249,249,249;
+	--highlight: 200,200,200;
 	--footer: #c0c0c0;
 	--footerborder: #717981;
 	--footerbg: #101010;
@@ -3289,7 +3289,7 @@ input, select, textarea {
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: rgba(var(--overlaybg), 0.5);
+			background-color: rgba(var(--overlaybg), .25);
 			background-blend-mode: multiply;
 			background-image: url("../../res/bg_tile.png");
 			background-size: auto;
@@ -3662,7 +3662,7 @@ input, select, textarea {
 
 	#nav {
 		color: var(--text);
-		background-color: rgba(var(--overlaybg), 0.8);
+		background-color: rgba(var(--overlaybg), 0.5);
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -3813,7 +3813,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: rgba(var(--overlaybg),0.6);
+		background-color: rgba(var(--overlaybg),0.25);
 		position: relative;
 		margin: 0 auto;
 		width: calc(100% - 4rem);
