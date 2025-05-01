@@ -25,63 +25,14 @@
 			xsmall:    ['361px',    '480px'    ],
 			xxsmall:   [null,       '360px'    ]
 		});
-
-	/**
-	 * Applies parallax scrolling to an element's background image.
-	 * @return {jQuery} jQuery object.
-	 */
-	$.fn._parallax = function(intensity) {
-
-		var	$window = $(window),
-			$this = $(this);
-
-		if (this.length == 0 || intensity === 0)
-			return $this;
-
-		if (this.length > 1) {
-
-			for (var i=0; i < this.length; i++)
-				$(this[i])._parallax(intensity);
-
-			return $this;
-
-		}
-
-		if (!intensity)
-			intensity = 0.25;
-
-		$this.each(function() {
-
-			var $t = $(this),
-				$bg = $('<div class="bg"></div>').appendTo($t);
-		});
-
-		$window
-			.off('load._parallax resize._parallax')
-			.on('load._parallax resize._parallax', function() {
-				$window.trigger('scroll');
-			});
-
-		return $(this);
-
-	};
-
+	
 	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
 		});
-
-	// Scrolly.
-	/*
-		$('.scrolly').scrolly();
-		$('.scrolly-middle').scrolly({ anchor: 'middle' });
-	*/
-
-	// Background.
-		$wrapper._parallax(0.925);
-	
+		
 	// Top Button.
 		$topButton = $(
 			'<a href="#header" id="topButton"></a>'
