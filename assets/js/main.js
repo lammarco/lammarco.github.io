@@ -13,7 +13,8 @@
 		$nav = $('#nav'),
 		$main = $('#main'),
 		$navPanelToggle, $navPanel, $navPanelInner,
-		$topButton;
+		$topButton,
+		$gallery;
 
 	// Breakpoints.
 		breakpoints({
@@ -32,6 +33,11 @@
 				$body.removeClass('is-preload');
 			}, 100);
 		});
+		
+	$('video').scrollex({
+		enter: function() {$(this)[0].play();},
+		leave: function() {$(this)[0].pause();}
+	})
 		
 	// Top Button.
 		$topButton = $(
@@ -175,7 +181,8 @@
 	//// Below elements are from Story template	
 
 	// Gallery.
-		$('.gallery')
+		$gallery = $('.gallery');
+		$gallery
 			.wrapInner('<div class="inner"></div>')
 			.prepend(browser.mobile ? '' : '<div class="forward"></div><div class="backward"></div>')
 			.scrollex({
@@ -206,11 +213,8 @@
 				.css('overflow-x', browser.mobile ? 'scroll' : 'auto')
 				.scrollLeft(0);
 
-		// Style #1.
-			// ...
-
 		// Style #2.
-			$('.gallery')
+			$gallery
 				.on('wheel', '.inner', function(event) {
 
 					var	$this = $(this),
@@ -237,7 +241,6 @@
 					$inner.animate( {scrollLeft: target_x}, 100 );
 				});
 
-		/* (Unused but useful)
 		// Lightbox.
 			$('.gallery.lightbox')
 				.on('click', 'a', function(event) {
@@ -271,15 +274,8 @@
 
 					// Focus.
 						$modal.focus();
-
-					// Delay.
-						setTimeout(function() {
-
-							// Unlock.
-								$modal[0]._locked = false;
-
-						}, 600);
-
+						
+						$modal[0]._locked = false;
 				})
 				.on('click', '.modal', function(event) {
 
@@ -300,28 +296,15 @@
 					// Clear visible, loaded.
 						$modal
 							.removeClass('loaded')
+							
+						$modal
+							.removeClass('visible')
 
-					// Delay.
-						setTimeout(function() {
+						// Unlock.
+						$modal[0]._locked = false;
 
-							$modal
-								.removeClass('visible')
-
-							setTimeout(function() {
-
-								// Clear src.
-									$modalImg.attr('src', '');
-
-								// Unlock.
-									$modal[0]._locked = false;
-
-								// Focus.
-									$body.focus();
-
-							}, 475);
-
-						}, 125);
-
+						// Focus.
+						$body.focus();
 				})
 				.on('keypress', '.modal', function(event) {
 
@@ -339,16 +322,10 @@
 							var $modalImg = $(this),
 								$modal = $modalImg.parents('.modal');
 
-							setTimeout(function() {
-
-								// No longer visible? Bail.
-									if (!$modal.hasClass('visible'))
-										return;
-
-								// Set loaded.
-									$modal.addClass('loaded');
-
-							}, 275);
+							// No longer visible? Bail.
+							if (!$modal.hasClass('visible'))
+								return;
+							// Set loaded.
+							$modal.addClass('loaded');
 						});
-		*/
 })(jQuery);
