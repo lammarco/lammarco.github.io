@@ -2652,10 +2652,8 @@ input, select, textarea {
 
 		.image.main, .video.main {
 			display: block;
-			margin: 2rem 0;
 			width: 100%;
 			height: auto;
-			padding-bottom: 2rem;
 		}
 		
 		.image.small, .video.small {
