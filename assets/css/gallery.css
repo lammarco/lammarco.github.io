@@ -42,7 +42,7 @@
 /* Gallery (style2) */
 
 	.gallery {
-		background-color: #000000;
+		background-color: transparent;
 		color: var(--text);
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -50,7 +50,6 @@
 		display: flex;
 		-webkit-overflow-scrolling: touch;
 		position: relative;
-		background-color: transparent;
 	}
 
 		.gallery input, .gallery select, .gallery textarea {
@@ -100,7 +99,7 @@
 			opacity: 0;
 			z-index: 2;
 		}
-
+/* comment block to remove Arrows*/
 		.gallery:hover > .forward, .gallery:hover > .backward {
 			opacity: .5;
 		}
@@ -160,13 +159,16 @@
 				transform: scaleX(-1);
 				left: 0.8rem;
 			}
-
+/**/
 		.gallery > .inner {
 			display: inherit;
 			overflow-x: auto;
 			overflow-y: hidden;
 			position: relative;
 			width: 100%;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			background-color: rgba(0,0,0,0.25);
 		}
 
 		.gallery article {
@@ -186,14 +188,19 @@
 
 			.gallery article .image {
 				display: block;
-				height: 100%;
-				width: auto;
+			}
+			
+			.gallery article video {
+				top: 50%;
+				transform: translateY(-50%);
 			}
 
 				.gallery article img, .gallery article video  {
 					display: inherit;
-					height: auto;
-					width: 100%;
+					height: 100%;
+					width: auto;
+					justify-content: center;
+					align-items: center;
 				}
 
 			.gallery article .caption {
