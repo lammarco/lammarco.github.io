@@ -68,6 +68,7 @@ table {
 
 body {
 	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
 }
 
 mark {
@@ -131,7 +132,7 @@ input, select, textarea {
 /* Type */
 
 	html {
-		font-size: 16pt;
+		font-size: 12pt;
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -192,7 +193,6 @@ input, select, textarea {
 
 	p {
 		text-align: justify;
-		margin: 0.5rem 0 1rem 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -3673,7 +3673,7 @@ input, select, textarea {
 		padding: 0 2rem 0 0;
 		position: relative;
 		width: calc(100% - 4rem);
-		max-width: 72rem;
+		max-width: 80rem;
 		z-index: 2;
 	}
 	
@@ -3816,7 +3816,7 @@ input, select, textarea {
 		position: relative;
 		margin: 0 auto;
 		width: calc(100% - 4rem);
-		max-width: 72rem;
+		max-width: 80rem;
 		z-index: 2;
 	}
 
@@ -4082,7 +4082,7 @@ input, select, textarea {
 		position: relative;
 		margin: 0 auto;
 		width: calc(100% - 4rem);
-		max-width: 72rem;
+		max-width: 80rem;
 		z-index: 2;
 	}
 
@@ -4393,11 +4393,11 @@ input, select, textarea {
 					}
 
 					#footer > section.split.contact > section:first-child {
-						padding: 4rem 4rem 1rem 4rem;
+						padding: 1rem 4rem 0.5rem 4rem;
 					}
 
 					#footer > section.split.contact > section:last-child {
-						padding: 0.5rem 4rem 4rem 4rem;
+						padding: 0.5rem 4rem 1rem 4rem;
 					}
 
 					#footer > section.split.contact > section.alt {
@@ -4517,7 +4517,7 @@ input, select, textarea {
 		text-transform: uppercase;
 		margin: 4rem auto 8rem auto;
 		width: calc(100% - 4rem);
-		max-width: 72rem;
+		max-width: 80rem;
 		z-index: 2;
 	}
 
