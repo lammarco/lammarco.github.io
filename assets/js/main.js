@@ -236,7 +236,7 @@
 						$inner = $this.siblings('.inner'),
 						$child = $inner.children('article').first(),
 						direction = ($this.hasClass('forward') ? 1 : -1),
-						target_x = $inner.scrollLeft() + ($child.width() * direction);
+						target_x = $inner.scrollLeft() + ($child.outerWidth(true) * direction);
 
 					$inner.animate( {scrollLeft: target_x}, 100 );
 				});

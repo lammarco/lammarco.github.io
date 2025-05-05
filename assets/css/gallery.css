@@ -42,7 +42,7 @@
 /* Gallery (style2) */
 
 	.gallery {
-		background-color: transparent;
+		background-color: rgba(0,0,0,0.25);
 		color: var(--text);
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -166,9 +166,8 @@
 			overflow-y: hidden;
 			position: relative;
 			width: 100%;
-			padding-left: 1rem;
-			padding-right: 1rem;
-			background-color: rgba(0,0,0,0.25);
+			padding: 0;
+			margin: 0 5rem 0 5rem;
 		}
 
 		.gallery article {
@@ -184,80 +183,102 @@
 			position: relative;
 			overflow: hidden;
 			max-width: 75vw;
+			width: 100%;
+			margin: 2rem 0.1rem 2rem 0.1rem;
 		}
 
-			.gallery article .image {
+			.gallery article a, .gallery article video{
 				display: block;
-			}
-			
-			.gallery article video {
 				top: 50%;
 				transform: translateY(-50%);
 			}
-
 				.gallery article img, .gallery article video  {
 					display: inherit;
+					/*
 					height: 100%;
 					width: auto;
+					*/
+					width: 100%;
+					height: auto;
 					justify-content: center;
 					align-items: center;
 				}
 
-			.gallery article .caption {
+			.gallery article .caption{
+				position: absolute;
+				pointer-events: none;
+				
 				-moz-align-items: center;
 				-webkit-align-items: center;
 				-ms-align-items: center;
 				align-items: center;
+				
 				display: -moz-flex;
 				display: -webkit-flex;
 				display: -ms-flex;
 				display: flex;
+				
 				-moz-flex-direction: column;
 				-webkit-flex-direction: column;
 				-ms-flex-direction: column;
 				flex-direction: column;
+				
 				-moz-justify-content: center;
 				-webkit-justify-content: center;
 				-ms-justify-content: center;
 				justify-content: center;
-				pointer-events: none;
+				
 				-moz-transition: opacity 0.2s ease-in-out;
 				-webkit-transition: opacity 0.2s ease-in-out;
 				-ms-transition: opacity 0.2s ease-in-out;
 				transition: opacity 0.2s ease-in-out;
+				
 				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background-color: rgba(0, 0, 0, 0.5);
-				opacity: 0;
-				padding: 3rem;
 				z-index: 1;
-				font-size: 0.8rem;
+				opacity: 0;
+				font-size: 1rem;
+				background-color: rgba(0, 0, 0, 0.7);
 			}
 
-				.gallery article .caption a {
-					pointer-events: auto;
-				}
+			.gallery article .caption a {
+				pointer-events: auto;
+			}
 
-				.gallery article .caption h2, .gallery article .caption h3, .gallery article .caption h4, .gallery article .caption h5, .gallery article .caption h6 {
-					font-size: 1.25rem;
-					margin-bottom: 0.25rem;
-				}
+			.gallery article .caption h2, .gallery article .caption h3, .gallery article .caption h4, .gallery article .caption h5, .gallery article .caption h6 {
+				font-size: 1.25rem;
+				margin-bottom: 0.25rem;
+			}
 
-				.gallery article .caption > * {
-					max-width: 100%;
-					margin-bottom: 1rem;
-				}
+			.gallery article .caption > * {
+				max-width: 100%;
+				margin-bottom: 1rem;
+			}
 
-				.gallery article .caption > :last-child {
-					margin-bottom: 0;
-				}
-
-			.gallery article:hover .caption {
+			.gallery article .caption > :last-child {
+				margin-bottom: 0;
+			}
+			
+			.gallery:hover .caption {
 				opacity: 1;
 			}
+			
+				.gallery article .caption.top-overlay{
+					width: 100%;
+					padding: 0.5rem 0 0.5rem 0;
+				}
+				.gallery article .caption.bottom-overlay{
+					width: 100%;
+					padding: 0.5rem 0 0.5rem 0;
+					bottom: 0;
+				}
+				
+				.gallery article .caption.center-overlay {
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					padding: 3rem;
+				}
 
 		@media screen and (max-width: 980px) {
 
