@@ -68,6 +68,7 @@ table {
 
 body {
 	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
 }
 
 mark {
@@ -192,7 +193,6 @@ input, select, textarea {
 
 	p {
 		text-align: justify;
-		margin: 0.5rem 0 1rem 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
