@@ -4393,11 +4393,11 @@ input, select, textarea {
 					}
 
 					#footer > section.split.contact > section:first-child {
-						padding: 4rem 4rem 1rem 4rem;
+						padding: 1rem 4rem 0.5rem 4rem;
 					}
 
 					#footer > section.split.contact > section:last-child {
-						padding: 0.5rem 4rem 4rem 4rem;
+						padding: 0.5rem 4rem 1rem 4rem;
 					}
 
 					#footer > section.split.contact > section.alt {
