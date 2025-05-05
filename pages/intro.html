@@ -52,45 +52,48 @@
 					<!-- Main -->
 						<div id="main">
 							<section class="posts">
-							
 								<article id="physics" class="post">
-									<header class="major">
-										<h2><a href="https://macrotree.itch.io/delta-physics-prototype" target="_blank">DeltaPhysics (Prototype)</a></h2>
-										<h4>Summer 2021 - Present (Spring 2024) | Role: Solo Developer</h4>
+									<header>
+										<h2><a href="https://macrotree.itch.io/deltaphysics-demo" target="_blank">DeltaPhysics</a></h2>
+										<h4>Summer 2021 - Ongoing | Role: Solo Developer</h4>
 									</header>
-									<video class="video main" autoplay muted loop playsinline controls>
-										<source src="../res/physics/physics_catapult.mp4">
-										This browser does not support HTML5 video.
-										<a href="../res/physics/physics_catapult.mp4" target="_blank">Click to view MP4</a>
-									</video>
 									
-									<figure class="image right">
-										<p>New: breakable rope + tension indicator</p>
-										<video class="video main" autoplay muted loop playsinline controls>
-											<source src="../res/physics/breakable_rope.mp4">
-											This browser does not support HTML5 video.
-											<a href="../res/physics/breakable_rope.mp4" target="_blank">Click to view MP4</a>
-										</video>
-										<img class="image fit" src="../res/physics/platforming.png"	
-											alt="Screenshot of platforming notes document at ../res/physics/platforming.png" />
-											<figcaption class="align-center"><a href="../res/physics/platforming.png" target="_blank">Document notes for platforming tricks and constraints</a></figcaption>
-									</figure>
-											
-									<p class="align-left">A physics-based Metroidvania project in <b>C# Unity2D</b> to deepen my understanding via implementing higher-level features:</p>
-										<ul class="nobullet">
-											<li class="nobullet">Editor Tools:</li> 	
-												<span class="indent align-left">Created custom inspector editors ranging from simple button organization to
-													helpers that facilitate map design.</span>
-											<li class="nobullet">Mechanical Depth:</li> 	
-												<span class="indent align-left">Implemented ability upgrades that all interact with the each other,
-													while each having various effects on the player and environments.</span>
-											<li class="nobullet">Map Design:</li> 	
-												<span class="indent align-left">Determining progression in an interconnected, nonlinear world of physics-related phenomena 
-													&mdash; while considering and documenting the contexts of ability upgrades' influences.</span>
-											<li class="nobullet">Mechanical Polish:</li> 	
-												<span class="indent align-left">Worked with (and against) the physics system to improve player experience, such as
-													state-dependent acceleration, adjusted jump curves, input grace times, etc.</span>
-										</ul>
+									<div class="gallery lightbox">
+											<article>
+												<video class="video main" muted loop playsinline controls>
+													<source src="../res/physics/breakable_rope.mp4">
+													This browser does not support HTML5 video.
+													<a href="../res/physics/breakable_rope.mp4" target="_blank">Click to view MP4</a>
+												</video>
+												<p class="caption bottom-overlay">Early tech demo for rope functionality</p>
+											</article>
+											<article>
+												<a href="../res/physics/corner_rounder.png" class="image">
+													<img src="../res/physics/corner_rounder.png" />
+												</a>
+												<p class="caption bottom-overlay">Screenshot of custom SpriteShape editor tool, allowing convenient creation of round corners.</p>
+											</article>
+											<article>
+												<a href="../res/physics/platforming.png" class="image">
+													<img src="../res/physics/platforming.png"/>
+												</a>
+												<p class="caption bottom-overlay">Documentation for advanced player movement, to help identify sequence breaks throughout the interconnected world.</p>
+											</article>
+									</div>
+									
+									<div class="image"><!--line break--></div>
+									
+									<p class="align-left">
+										Long-term Unity C# self-improvement project &mdash; to redesign <a href="https://macrotree.itch.io/forceslinger">my previous platformer</a>
+										into a professional Metroidvania:
+									</p>
+									
+									<ul>
+										<li class="align-left">Created custom editor tools to extend SpriteShape2D functionality, increasing level design productivity by simplifying intermediate steps.</li> 
+										<li class="align-left">Designed and implemented higher-complexity ability upgrades that all interact with each other, allowing organic yet complex nuances in player movement.</li> 
+										<li class="align-left">Fine-tuned physics forces using vector math for mechanical polish, including state-dependent acceleration, adjusted jump curves, input grace times, etc.</li> 
+										<li class="align-left">Flowcharted progression in an interconnected, nonlinear map &mdash; while considering and documenting the contexts and interactions of ability upgrades.</li> 
+									</ul>
 									<ul class="actions special">
 										<li><a href="https://macrotree.itch.io/delta-physics-prototype" target="_blank" class="button large">Play the Game</a></li>
 									</ul>
