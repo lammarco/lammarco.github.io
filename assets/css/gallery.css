@@ -42,7 +42,7 @@
 /* Gallery (style2) */
 
 	.gallery {
-		background-color: rgba(0,0,0,0.25);
+		background-color: transparent;
 		color: var(--text);
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -50,6 +50,15 @@
 		display: flex;
 		-webkit-overflow-scrolling: touch;
 		position: relative;
+		
+		-moz-transition: background-color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out;
+	}
+	
+	.gallery:hover {
+		background-color: rgba( 0,0,0, 0.25 );
 	}
 
 		.gallery input, .gallery select, .gallery textarea {
