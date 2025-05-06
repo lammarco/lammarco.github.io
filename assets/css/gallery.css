@@ -193,7 +193,8 @@
 			overflow: hidden;
 			max-width: 75vw;
 			width: 100%;
-			margin: 2rem 0.1rem 2rem 0.1rem;
+			margin: 0rem 0.1rem 0rem 0.1rem;
+			padding: 2rem 0 2rem 0;
 		}
 
 			.gallery article a, .gallery article video{
@@ -246,7 +247,7 @@
 				z-index: 1;
 				opacity: 0;
 				font-size: 1rem;
-				background-color: rgba(0, 0, 0, 0.7);
+				background-color: rgba(0, 0, 0, 0.5);
 			}
 
 			.gallery article .caption a {
@@ -274,6 +275,7 @@
 				.gallery article .caption.top-overlay{
 					width: 100%;
 					padding: 0.5rem 0 0.5rem 0;
+					top: 0;
 				}
 				.gallery article .caption.bottom-overlay{
 					width: 100%;
