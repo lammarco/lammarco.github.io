@@ -3673,7 +3673,7 @@ input, select, textarea {
 		padding: 0 2rem 0 0;
 		position: relative;
 		width: calc(100% - 4rem);
-		max-width: 80rem;
+		max-width: 100rem;
 		z-index: 2;
 	}
 	
@@ -3816,7 +3816,7 @@ input, select, textarea {
 		position: relative;
 		margin: 0 auto;
 		width: calc(100% - 4rem);
-		max-width: 80rem;
+		max-width: 100rem;
 		z-index: 2;
 	}
 
@@ -3894,7 +3894,7 @@ input, select, textarea {
 			align-items: stretch;
 			text-align: center;
 			width: 100%;
-			padding: 2rem;
+			padding: 2rem 4rem 2rem 4rem;
 		}
 
 			#main > .posts > * {
@@ -3927,6 +3927,23 @@ input, select, textarea {
 				display: flex;
 			}
 			
+			#main > .posts > article > .flex-center {
+				display: flex;
+				justify-content: center;
+			}
+			
+			#main > .posts > article > .pad-4, #main > .posts > article > .pad-5 {
+				display: block;
+			}
+			
+			#main > .posts > article > .pad-4 {
+				padding: 0 4rem;
+			}
+			
+			#main > .posts > article > .pad-5 {
+				padding: 0 5rem;
+			}
+
 			#main > .posts > article:nth-child(2n+1) > content {
 				-moz-flex-direction: row-reverse;
 				-webkit-flex-direction: row-reverse;
@@ -4082,7 +4099,7 @@ input, select, textarea {
 		position: relative;
 		margin: 0 auto;
 		width: calc(100% - 4rem);
-		max-width: 80rem;
+		max-width: 100rem;
 		z-index: 2;
 	}
 
